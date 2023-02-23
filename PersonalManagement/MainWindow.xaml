@@ -9,9 +9,10 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition MinWidth="150" Width="*"/>
             <ColumnDefinition Width="4*"/>
         </Grid.ColumnDefinitions>
         <components:NavigationMenuView Grid.Column="0" DataContext="{Binding NavigationMenuViewModel}"/>
+        <components:NavigableView Grid.Column="1"/>
     </Grid>
 </Window>

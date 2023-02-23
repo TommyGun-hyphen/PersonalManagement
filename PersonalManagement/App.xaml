@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:PersonalManagement">
     <Application.Resources>
-         
+        <Color x:Key="SecondaryColor">#778da9</Color>
+        <SolidColorBrush x:Key="SecondaryBrush" Color="{StaticResource SecondaryColor}" />
     </Application.Resources>
 </Application>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PersonalManagement.Stores;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,11 +9,15 @@ namespace PersonalManagement.ViewModels
 {
     public class MainViewModel : BaseViewModel
     {
-        public NavigationMenuViewModel NavigationMenuViewModel { get; }
+        private readonly NavigationStore navigationStore;
 
-        public MainViewModel(NavigationMenuViewModel navigationMenuViewModel)
+        public NavigationMenuViewModel NavigationMenuViewModel { get; }
+        public BaseViewModel CurrentViewModel => navigationStore.CurrentViewModel;
+
+        public MainViewModel(NavigationMenuViewModel navigationMenuViewModel, NavigationStore navigationStore)
         {
             this.NavigationMenuViewModel = navigationMenuViewModel;
+            this.navigationStore = navigationStore;
         }
     }
 }

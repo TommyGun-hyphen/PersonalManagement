@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="PersonalManagement.Components.NavigableView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:viewmodels="clr-namespace:PersonalManagement.ViewModels"
+             xmlns:local="clr-namespace:PersonalManagement.Components"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <DataTemplate DataType="{x:Type viewmodels:TodoListViewModel}">
+            <local:TodoListView/>
+        </DataTemplate>
+    </UserControl.Resources>
+    <Grid>
+        <ContentControl Content="{Binding CurrentViewModel}"/>
+    </Grid>
+</UserControl>
